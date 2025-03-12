@@ -17,7 +17,7 @@ const ThoughtBubble: React.FC<ThoughtBubbleProps> = ({ x, y, text }) => {
         alt="Thought Bubble"
         className="w-auto h-[30rem] object-contain"
       />
-      <p className="absolute mt-[-2rem] text-black font-bold text-xl text-center w-[20rem]">
+      <p className="absolute mt-[-3rem] text-black font-bold text-xl text-center w-[15rem]">
         {text}
       </p>
     </div>
