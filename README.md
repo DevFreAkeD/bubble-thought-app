@@ -1,36 +1,59 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🎭 Real-Time Thought Bubble App
 
-## Getting Started
+A real-time facial recognition app that generates persistent thought bubbles above detected faces using **TensorFlow.js (BlazeFace)** and **React with Next.js**.
 
-First, run the development server:
+## 🚀 Features
+- 🧠 **Face Tracking**: Detects multiple faces simultaneously.
+- 💬 **Persistent Thought Bubbles**: Thoughts stay fixed to each person.
+- 🎥 **Smooth Movement**: Uses interpolation for stable tracking.
+- 🔄 **Handles Rotations**: Faces retain thoughts even when turned.
+- 🌍 **Fully Browser-Based**: Runs with TensorFlow.js, no external backend needed.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## 🛠️ Tech Stack
+- **Frontend**: React, Next.js
+- **State Management**: useState, useRef
+- **AI/ML**: TensorFlow.js (BlazeFace Model)
+- **Webcam Integration**: react-webcam
+
+## 📦 Installation
+```sh
+# Clone the repository
+git clone https://github.com/DevFreAkeD/bubble-thought-app.git
+cd thought-bubble-app
+
+# Install dependencies
+yarn install  # or npm install
+
+# Start the development server
+yarn dev  # or npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 📸 How It Works
+1. **Start the App** → Your webcam starts streaming.
+2. **Face Detection** → BlazeFace detects faces in real time.
+3. **Thought Assignment** → Each face gets a unique, persistent thought bubble.
+4. **Smooth Tracking** → Thoughts stay fixed even when moving or rotating.
+5. **Multiple Faces Supported** → Up to 10 faces tracked simultaneously.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🎯 Usage
+- Open the app in your browser.
+- Allow webcam access when prompted.
+- Move around, rotate your head – your thought bubble stays consistent!
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🐞 Troubleshooting
+**Issue: Thought bubbles disappear or flicker?**  
+🔹 Make sure there is **good lighting** for face detection.  
+🔹 Avoid **low-resolution webcams** which may affect detection accuracy.
 
-## Learn More
+**Issue: Bubbles shrink on one side?**  
+🔹 The app now normalizes bubble size – try increasing the `baseFaceSize` value in `CameraFeed.tsx`.
 
-To learn more about Next.js, take a look at the following resources:
+## 📜 License
+This project is licensed under the MIT License.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🤝 Contributing
+Pull requests are welcome! Open an issue for bug reports or feature requests.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+🔥 **Enjoy watching your thoughts float above your head in real-time!** 😆
